@@ -1,5 +1,3 @@
-
-// src/components/StatsCard.tsx
 import { Card, CardContent, Typography } from '@mui/material';
 
 interface StatsCardProps {

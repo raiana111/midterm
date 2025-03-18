@@ -1,4 +1,3 @@
-// src/components/IncomeCard.tsx
 import { Card, CardContent, Typography, Button } from '@mui/material';
 import { Income } from '../types';
 

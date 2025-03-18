@@ -1,4 +1,3 @@
-// src/components/ExpenseCard.tsx
 import { Card, CardContent, Typography, Button } from '@mui/material';
 import { Expense } from '../types';
 

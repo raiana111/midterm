@@ -1,10 +1,9 @@
-// src/components/CategoryForm.tsx
 import React, { useState } from 'react';
 import { Category } from '../types';
 import { Button, Stack, TextField } from '@mui/material';
 
 interface Props {
-  onSubmit: (category: Omit<Category, 'id'>) => void; // 'id' добавит Firebase
+  onSubmit: (category: Omit<Category, 'id'>) => void;
   loading?: boolean;
 }
 
@@ -51,3 +50,11 @@ const CategoryForm = ({ onSubmit, loading = false }: Props) => {
 };
 
 export default CategoryForm;
+
+
+
+
+
+
+
+

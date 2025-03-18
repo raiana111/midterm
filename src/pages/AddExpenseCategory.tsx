@@ -5,29 +5,34 @@ import { Container, Typography } from '@mui/material';
 import { useAppContext } from '../context/AppContext';
 import { Category } from '../types';
 
-const AddIncomeCategory = () => {
-  const { addIncomeCategory } = useAppContext();
+const AddExpenseCategory = () => {
+  const { addExpenseCategory } = useAppContext();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
 
   const onAddCategoryClick = (categoryData: Omit<Category, 'id'>) => {
     setLoading(true);
     const newCategory = { id: Date.now().toString(), ...categoryData };
-    addIncomeCategory(newCategory);
+    addExpenseCategory(newCategory);
     console.log('Category added:', newCategory);
-    navigate('/add-income');
+    navigate('/add-expense');
     setLoading(false);
   };
 
   return (
     <Container>
       <Typography variant="h4" sx={{ my: 2 }}>
-        Создать категорию доходов
+        Создать категорию расходов
       </Typography>
       <CategoryForm onSubmit={onAddCategoryClick} loading={loading} />
     </Container>
   );
 };
 
-export default AddIncomeCategory;
+export default AddExpenseCategory;
+
+
+
+
+
 
